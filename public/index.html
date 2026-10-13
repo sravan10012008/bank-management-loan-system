@@ -1,0 +1,35 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Sign in | Bank Management System</title>
+  <link rel="stylesheet" href="/styles.css">
+  <script src="/login.js" defer></script>
+</head>
+<body class="login-page">
+  <main class="login-shell">
+    <section class="login-brand">
+      <div class="brand-mark">₹</div>
+      <p class="eyebrow">BANK MANAGEMENT SYSTEM</p>
+      <h1>Smarter banking starts here.</h1>
+      <p class="muted-light">Manage loan applications and review illustrative eligibility assessments in one simple workspace.</p>
+      <div class="login-note"><span class="dot"></span> Secure session-based sign in</div>
+    </section>
+    <section class="login-card">
+      <p class="eyebrow blue">WELCOME BACK</p>
+      <h2>Sign in to your account</h2>
+      <p class="subtext">Use your project demo credentials to continue.</p>
+      <div id="login-message" class="message hidden" role="alert"></div>
+      <form id="login-form">
+        <label for="username">Username</label>
+        <input id="username" name="username" autocomplete="username" required maxlength="100" placeholder="Enter username">
+        <label for="password">Password</label>
+        <input id="password" name="password" type="password" autocomplete="current-password" required maxlength="200" placeholder="Enter password">
+        <button class="btn primary full" type="submit" id="login-button">Sign in securely</button>
+      </form>
+      <p class="login-foot">College project demo · Local SQLite database</p>
+    </section>
+  </main>
+</body>
+</html>

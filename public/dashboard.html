@@ -1,0 +1,34 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Dashboard | Bank Management System</title><link rel="stylesheet" href="/styles.css">
+  <script src="/app.js" defer></script>
+</head>
+<body data-page="dashboard">
+  <header class="topbar">
+    <a class="brand" href="/dashboard.html"><span class="brand-icon">₹</span><span>Bank<span class="brand-light">Desk</span></span></a>
+    <div class="top-actions"><span id="welcome-user" class="welcome-user"></span><button class="btn outline small" data-logout>Logout</button></div>
+  </header>
+  <div class="layout">
+    <aside class="sidebar">
+      <p class="nav-label">WORKSPACE</p>
+      <a class="nav-link active" href="/dashboard.html">▦ <span>Dashboard</span></a>
+      <a class="nav-link" href="/application.html">＋ <span>Check Loan Eligibility</span></a>
+      <a class="nav-link" href="/history.html">▤ <span>Application History</span></a>
+      <div class="sidebar-bottom"><div class="mini-shield">✓</div><strong>Local & secure</strong><small>Your records are linked to your login.</small></div>
+    </aside>
+    <main class="content">
+      <div class="page-heading"><div><p class="eyebrow blue">OVERVIEW</p><h1>Dashboard</h1><p class="subtext">A quick view of your loan application activity.</p></div><a class="btn primary" href="/application.html">＋ New application</a></div>
+      <div id="page-message" class="message hidden" role="status"></div>
+      <section class="stats-grid">
+        <article class="stat-card"><div class="stat-top"><span>Total applications</span><span class="stat-icon blue-bg">▤</span></div><div class="stat-number" id="stat-total">—</div><p>Applications saved to your account</p></article>
+        <article class="stat-card"><div class="stat-top"><span>Eligible</span><span class="stat-icon green-bg">✓</span></div><div class="stat-number" id="stat-eligible">—</div><p>Meet the project eligibility rules</p></article>
+        <article class="stat-card"><div class="stat-top"><span>Not eligible</span><span class="stat-icon red-bg">!</span></div><div class="stat-number" id="stat-rejected">—</div><p>Do not meet the project rules</p></article>
+      </section>
+      <section class="panel welcome-panel"><div><p class="eyebrow blue">GET STARTED</p><h2>Assess a loan application</h2><p>Enter applicant and financial details to calculate an illustrative result. The assessment and all inputs are saved in SQLite when you submit the form.</p><a class="btn primary" href="/application.html">Check eligibility <span>→</span></a></div><div class="welcome-illustration" aria-hidden="true"><div class="bank-building"><div class="roof"></div><div class="columns"><i></i><i></i><i></i></div><div class="base"></div></div><div class="coin">₹</div></div></section>
+      <p class="disclaimer">Educational demonstration only. These rules are not an actual bank lending policy or a loan offer.</p>
+    </main>
+  </div>
+</body>
+</html>

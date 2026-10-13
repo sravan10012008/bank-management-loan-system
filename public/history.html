@@ -1,0 +1,22 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Application History | Bank Management System</title><link rel="stylesheet" href="/styles.css">
+  <script src="/app.js" defer></script>
+</head>
+<body data-page="history">
+  <header class="topbar"><a class="brand" href="/dashboard.html"><span class="brand-icon">₹</span><span>Bank<span class="brand-light">Desk</span></span></a><div class="top-actions"><span id="welcome-user" class="welcome-user"></span><button class="btn outline small" data-logout>Logout</button></div></header>
+  <div class="layout"><aside class="sidebar"><p class="nav-label">WORKSPACE</p><a class="nav-link" href="/dashboard.html">▦ <span>Dashboard</span></a><a class="nav-link" href="/application.html">＋ <span>Check Loan Eligibility</span></a><a class="nav-link active" href="/history.html">▤ <span>Application History</span></a><div class="sidebar-bottom"><div class="mini-shield">✓</div><strong>Local & secure</strong><small>Your records are linked to your login.</small></div></aside>
+    <main class="content">
+      <div class="page-heading"><div><p class="eyebrow blue">YOUR RECORDS</p><h1>Application history</h1><p class="subtext">View, filter, edit or delete applications saved under your account.</p></div><a class="btn primary" href="/application.html">＋ New application</a></div>
+      <div id="history-message" class="message hidden" role="status"></div>
+      <section class="panel table-panel"><div class="table-toolbar"><div><h2>Saved applications</h2><p class="form-help">Only records created by your login are shown.</p></div><div class="filter-control"><label for="status-filter">Status</label><select id="status-filter"><option value="All">All applications</option><option value="Eligible">Eligible</option><option value="Not Eligible">Not eligible</option></select></div></div>
+        <div class="table-wrap"><table><thead><tr><th>ID</th><th>Applicant</th><th>Age</th><th>Monthly income</th><th>Disposable income</th><th>Assessment</th><th>Max. loan amount</th><th>Actions</th></tr></thead><tbody id="history-body"><tr><td colspan="8" class="empty-cell">Loading applications…</td></tr></tbody></table></div>
+        <p id="history-count" class="table-foot"></p>
+      </section>
+      <p class="disclaimer">All amounts and assessments are illustrative. They are not actual bank lending decisions.</p>
+    </main>
+  </div>
+</body>
+</html>

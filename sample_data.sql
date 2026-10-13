@@ -1,0 +1,19 @@
+-- OPTIONAL sample DML. Run only after the database has been initialized
+-- and the demo user has been created. This inserts one example application.
+-- The password hash is intentionally not included here; application login
+-- credentials are created securely by init-db.js.
+-- Replace :demo_user_id with the actual user_id for the demo account if using
+-- a SQLite client that supports named parameters.
+--
+-- INSERT INTO LOAN_APPLICATIONS (
+--   applicant_name, age, current_bank_balance, average_monthly_balance,
+--   monthly_income, monthly_expenses, monthly_turnover, yearly_turnover,
+--   employment_type, existing_monthly_loan_payments, disposable_income,
+--   eligibility_status, max_eligible_loan_amount, assessment_explanation,
+--   user_id
+-- ) VALUES (
+--   'Sample Applicant', 28, 50000, 40000, 60000, 25000, 100000, 1200000,
+--   'Salaried', 5000, 30000, 'Eligible', 720000,
+--   'Illustrative example only: applicant is at least 21 and disposable income is positive.',
+--   :demo_user_id
+-- );

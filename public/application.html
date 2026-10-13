@@ -1,0 +1,39 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Loan Eligibility | Bank Management System</title><link rel="stylesheet" href="/styles.css">
+  <script src="/app.js" defer></script>
+</head>
+<body data-page="application">
+  <header class="topbar"><a class="brand" href="/dashboard.html"><span class="brand-icon">₹</span><span>Bank<span class="brand-light">Desk</span></span></a><div class="top-actions"><span id="welcome-user" class="welcome-user"></span><button class="btn outline small" data-logout>Logout</button></div></header>
+  <div class="layout"><aside class="sidebar"><p class="nav-label">WORKSPACE</p><a class="nav-link" href="/dashboard.html">▦ <span>Dashboard</span></a><a class="nav-link active" href="/application.html">＋ <span>Check Loan Eligibility</span></a><a class="nav-link" href="/history.html">▤ <span>Application History</span></a><div class="sidebar-bottom"><div class="mini-shield">✓</div><strong>Local & secure</strong><small>Your records are linked to your login.</small></div></aside>
+    <main class="content">
+      <div class="page-heading"><div><p class="eyebrow blue">APPLICATION WORKSPACE</p><h1 id="form-title">Check loan eligibility</h1><p class="subtext">Complete the form to assess and save an application.</p></div><a class="btn outline" href="/history.html">View history</a></div>
+      <div class="notice"><strong>Educational rule:</strong> applicant must be at least 21 and monthly disposable income must be positive. This is not actual bank lending policy.</div>
+      <div id="form-message" class="message hidden" role="alert"></div>
+      <form id="application-form" class="panel form-panel" novalidate>
+        <input type="hidden" id="application-id">
+        <h2>Applicant details</h2><p class="form-help">Fields marked * are required.</p>
+        <div class="form-grid">
+          <div class="field span-2"><label for="applicantName">Applicant full name *</label><input id="applicantName" name="applicantName" required minlength="2" maxlength="100" placeholder="e.g. Ananya Kumar"></div>
+          <div class="field"><label for="age">Age (years) *</label><input id="age" name="age" type="number" min="18" max="100" step="1" required placeholder="e.g. 28"></div>
+          <div class="field"><label for="employmentType">Employment type *</label><select id="employmentType" name="employmentType" required><option value="">Select employment type</option><option value="Salaried">Salaried</option><option value="Self-employed">Self-employed</option></select></div>
+        </div>
+        <div class="section-divider"></div><h2>Bank and financial details</h2><p class="form-help">Enter amounts in Indian rupees (₹). Use numbers only.</p>
+        <div class="form-grid">
+          <div class="field"><label for="currentBankBalance">Current bank balance (₹) *</label><input id="currentBankBalance" type="number" min="0" max="1000000000000" step="0.01" required placeholder="e.g. 50000"></div>
+          <div class="field"><label for="averageMonthlyBalance">Average monthly balance (₹) *</label><input id="averageMonthlyBalance" type="number" min="0" max="1000000000000" step="0.01" required placeholder="e.g. 40000"></div>
+          <div class="field"><label for="monthlyIncome">Monthly income (₹) *</label><input id="monthlyIncome" type="number" min="0" max="1000000000000" step="0.01" required placeholder="e.g. 60000"></div>
+          <div class="field"><label for="monthlyExpenses">Monthly expenses (₹) *</label><input id="monthlyExpenses" type="number" min="0" max="1000000000000" step="0.01" required placeholder="e.g. 25000"></div>
+          <div class="field"><label for="existingMonthlyLoanPayments">Existing monthly loan payments (₹) *</label><input id="existingMonthlyLoanPayments" type="number" min="0" max="1000000000000" step="0.01" required placeholder="e.g. 5000"></div>
+          <div class="field"><label for="monthlyTurnover">Monthly turnover (₹) *</label><input id="monthlyTurnover" type="number" min="0" max="1000000000000" step="0.01" required placeholder="e.g. 100000"></div>
+          <div class="field"><label for="yearlyTurnover">Yearly turnover (₹) *</label><input id="yearlyTurnover" type="number" min="0" max="1000000000000" step="0.01" required placeholder="e.g. 1200000"></div>
+        </div>
+        <div class="form-actions"><button class="btn outline" type="reset" id="reset-button">Clear form</button><button class="btn primary" type="submit" id="save-button">Assess & save application</button></div>
+      </form>
+      <section id="assessment-result" class="panel result-panel hidden" aria-live="polite"></section>
+    </main>
+  </div>
+</body>
+</html>
